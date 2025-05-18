@@ -67,8 +67,7 @@ func main() {
 	}
 
 	cmd := exec.Command("git", "-C", repoDir, "rev-parse", "--is-inside-work-tree")
-	out, err := cmd.CombinedOutput()
-	if err != nil {
+	if out, err := cmd.CombinedOutput(); err != nil {
 		log.Fatalf("REPO_DIR %s is not a valid git repository: %v\n%s", repoDir, err, out)
 	}
 
