@@ -75,7 +75,7 @@ func main() {
 		listenAddr = ":8080"
 	}
 
-	http.HandleFunc("/hook", handler)
+	http.HandleFunc("/webhook", handler)
 	log.Printf("[%s] listening on %s", projectName, listenAddr)
 	log.Fatal(http.ListenAndServe(listenAddr, nil))
 }

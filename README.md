@@ -76,7 +76,7 @@ To run RepoSync as a systemd service:
 
 Configure a webhook in your GitHub repository:
 
-- Payload URL: `http://your-server.com:8080/hook`
+- Payload URL: `http://your-server.com:8080/webhook`
 - Content type: `application/json`
 - Secret: same value as your `GITHUB_SECRET`
 - Events: Just the push event
